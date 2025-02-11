@@ -10,6 +10,7 @@ OBJCOPY := $(CROSS_COMPILE)objcopy
 SRC := ../wiznet/source/system_w7500x.c \
        ../wiznet/source/w7500x_it.c \
        ../wiznet/source/w7500x_crg.c \
+       ../wiznet/source/w7500x_gpio.c \
        main.c 
 
 ASRC := ../wiznet/source/startup_w7500x.s 
@@ -21,7 +22,7 @@ INC := -I ../wiznet/include \
 CFLAGS := -g -O3 -mthumb -mcpu=cortex-m0 $(INC)
 LDFLAGS := -T ../wiznet/linker/gcc_w7500x.ld -nostdlib 
 
-NAME := hello
+NAME := blinky
 
 all: $(NAME).bin
 

@@ -127,27 +127,27 @@ __isr_vector:
     .long   UART0_Handler               /* 16+ 2: UART 0 Handler                  */
     .long   UART1_Handler               /* 16+ 3: UART 1 Handler                  */
     .long   UART2_Handler               /* 16+ 4: UART 2 Handler                  */
-    .long   I2C0_Handler                /* 16+ 5: I2C 0 Handler                   */
-    .long   I2C1_Handler                /* 16+ 6: I2C 1 Handler                   */
+                                        /* 16+ 5: Reserved                        */
+                                        /* 16+ 6: Reserved                        */
     .long   PORT0_Handler               /* 16+ 7: GPIO Port 0 Combined Handler    */
     .long   PORT1_Handler               /* 16+ 8: GPIO Port 1 Combined Handler    */
     .long   PORT2_Handler               /* 16+ 9: GPIO Port 2 Combined Handler    */
     .long   PORT3_Handler               /* 16+10: GPIO Port 3 Combined Handler    */
     .long   DMA_Handler		            /* 16+11: DMA Combined Handler            */
     .long   DUALTIMER0_Handler          /* 16+12: Dual timer 0 handler            */ 
-    .long   DUALTIMER1_Handler		     /* 16+ 13: Dual timer 1 Handler	*/
-    .long   PWM0_Handler		            /* 16+ 14: PWM0 Handler		*/
-    .long   PWM1_Handler		            /* 16+ 15: PWM1 Handler		*/
-    .long   PWM2_Handler		            /* 16+ 16: PWM2 Handler		*/
-    .long   PWM3_Handler		            /* 16+ 17: PWM3 Handler		*/
-    .long   PWM4_Handler		            /* 16+ 18: PWM4 Handler		*/
-    .long   PWM5_Handler		            /* 16+ 19: PWM5 Handler		*/
-    .long   PWM6_Handler		            /* 16+ 20: PWM6 Handler		*/
-    .long   PWM7_Handler		            /* 16+ 21: PWM7 Handler		*/
-    .long   RTC_Handler		            /* 16+ 22: RTC Handler			*/
-    .long   ADC_Handler		            /* 16+ 23: ADC Handler			*/
-    .long   WZTOE_Handler               /* 16+ 24: WZTOE Handler		*/
-    .long   EXTI_Handler                /* 16+ 25: EXTI Handler       */
+    .long   DUALTIMER1_Handler		    /* 16+ 13: Dual timer 1 Handler	          */
+    .long   PWM0_Handler		        /* 16+ 14: PWM0 Handler		              */
+    .long   PWM1_Handler		        /* 16+ 15: PWM1 Handler		              */
+    .long   PWM2_Handler		        /* 16+ 16: PWM2 Handler		              */
+    .long   PWM3_Handler		        /* 16+ 17: PWM3 Handler		              */
+    .long   PWM4_Handler		        /* 16+ 18: PWM4 Handler		              */
+    .long   PWM5_Handler		        /* 16+ 19: PWM5 Handler		              */
+    .long   PWM6_Handler		        /* 16+ 20: PWM6 Handler		              */
+    .long   PWM7_Handler		        /* 16+ 21: PWM7 Handler		              */
+    .long   RTC_Handler		            /* 16+ 22: RTC Handler			          */
+    .long   ADC_Handler		            /* 16+ 23: ADC Handler			          */
+    .long   WZTOE_Handler               /* 16+ 24: WZTOE Handler		          */
+    .long   EXTI_Handler                /* 16+ 25: EXTI Handler                   */
 
     .size    __isr_vector, . - __isr_vector
 /* Reset Handler */
@@ -239,8 +239,6 @@ Reset_Handler:
     def_default_handler    UART0_Handler
     def_default_handler    UART1_Handler
     def_default_handler    UART2_Handler
-    def_default_handler    I2C0_Handler
-    def_default_handler    I2C1_Handler
     def_default_handler    PORT0_Handler
     def_default_handler    PORT1_Handler
     def_default_handler    PORT2_Handler
